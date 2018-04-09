@@ -1,0 +1,23 @@
+.congratulations{
+    color: white;
+    padding: 30px 50px;
+    border-radius: 25px;
+    border: 4px solid #ff6;
+    background: rgba(0, 0, 0, 0.41);
+    margin-top: 170px;
+}
+input{
+    width: 100%;
+}
+.dicas {
+    background: #fff;
+    border-radius: 7px 7px 2px 2px;
+    -webkit-box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
+    z-index: 5;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+}

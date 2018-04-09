@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+        
+    </div>
+    
+    
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+        <h1 style="text-align:center">STAR QUIZ</h1>
+        <div class="conte-timer">
+        <app-timer></app-timer>
+        <h1>Pontos: {{points}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-3 conter-info" *ngFor="let item of collection">
+        <div class="server-action-menu">
+          {{item.name}}
+          <p> <span style="color:#ff6;font-weight:bolder">Gender: </span>{{item.gender}}</p>
+          <p><span style="color:#ff6;font-weight:bolder">Height: </span>{{item.height}}</p>
+          <p><span style="color:#ff6;font-weight:bolder">Hair: </span>{{item.hair_color}}</p>
+          
+         <form>
+          <input type="text" id="name" name="name" required minlength="2" [ngModel]="check" #productName="ngModel" [disabled]="item.check"/>
+      
+            <div class="right" *ngIf="checkNames(item, productName.value)">
+              Parabéns
+            </div>
+        
+          </form>
+       
+       
+
+          <button class="dicas" (click)="openWindowCustomClass(content)">Dicas</button>
+          <ng-template #content let-c="close" let-d="dismiss">
+      
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+         
+            <div class="modal-body">
+              <p><span style="color:#ff6;font-weight:bolder">Mass:</span> {{item.mass}}</p> 
+              <p><span style="color:#ff6;font-weight:bolder">Skin color:</span> {{item.skin_color}}</p>
+              <p><span style="color:#ff6;font-weight:bolder">Eyes color:</span> {{item.eye_color}}</p>
+              <p><span style="color:#ff6;font-weight:bolder">Birth Year:</span> {{item.birth_year}}</p>
+            </div>
+           
+          </ng-template>
+          
+          
+
+          </div>
+      </div>
+    </div>
+</div>
+

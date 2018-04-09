@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="congratulations">
+        <h1>Parabens!</h1>
+        <p>Você fez pontos</p>
+        <p>preencha o formulário abaixo para salvar sua pontuação:</p>
+        <form>
+           
+      
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required 
+              minlength="2" [(ngModel)]="name" #productName="ngModel" />
+          
+            <div class="error" *ngIf="productName.dirty && productName.errors?.required">
+              Campo obrigatório
+            </div>
+                 
+            <br>
+      
+            <label for="description">Email</label>
+            <input type="text" id="email" name="email" required [(ngModel)]="email" #productemail="ngModel"/>
+            <div class="error" *ngIf="productemail.dirty && productemail.errors?.required">
+                Campo obrigatório
+              </div>
+            
+            <button class="dicas">Salvar</button>
+      
+          </form>
+      </div>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</div>

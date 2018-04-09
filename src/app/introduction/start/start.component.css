@@ -1,0 +1,20 @@
+.start-content {
+    padding-top: 60px;
+}
+.start-content h1 {
+    color: #ff6;
+    font-weight: bold;
+}
+.start-content img {
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    width: 40%;
+    margin-bottom: 30px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+.start-content a {
+    color: #ff6;
+    font-weight: bold;
+}
