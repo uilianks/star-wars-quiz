@@ -25,6 +25,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 export class GameComponent implements OnInit {
   collection: People[];
   closeResult: string;
+  
   @Input() points: number = 0;
 
   constructor(private gameService: GameService, private modalService: NgbModal, ) { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Observable} from 'rxjs/Rx';
 import { Router } from '@angular/router';
 
@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class TimerComponent implements OnInit {
   ticks = 0;
+  @Input() pointer:number
   constructor(private router: Router) { }
-
+  
   ngOnInit() {
     let timer = Observable.timer(2000,1000);
     timer.subscribe(t => this.tickerFunc(t));

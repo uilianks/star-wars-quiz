@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./endgame.component.css']
 })
 export class EndgameComponent implements OnInit {
+  
   points: number;
+
   constructor() { }
 
   ngOnInit() {
