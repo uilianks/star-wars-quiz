@@ -1,0 +1,36 @@
+.conter-info {
+    padding: 30px 30px;
+}
+.conte-timer {
+    float: right;
+    font-size: 40px;
+    color: black;
+    text-shadow: 0px 0px 12px red;
+    position: relative;
+    top: -66px;
+}
+h1 {
+    color: #ff6;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.dicas {
+    background: #fff;
+    border-radius: 7px 7px 2px 2px;
+    -webkit-box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
+    box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
+    z-index: 5;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+}
+.server-action-menu{
+    padding: 5px;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 25px;
+    border: 4px solid #ff6;
+    background: rgba(0, 0, 0, 0.41);
+}

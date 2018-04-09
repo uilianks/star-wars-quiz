@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+        
+    </div>
+    
+    
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+        <h1 style="text-align:center">STAR QUIZ</h1>
+        <div class="conte-timer">
+        <app-timer></app-timer>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-3 conter-info" *ngFor="let item of collection">
+        <div class="server-action-menu">
+          <!-- {{item.name}}-->
+          <p> <span style="color:#ff6;font-weight:bolder">Gender: </span> {{item.gender}}</p>
+          <p><span style="color:#ff6;font-weight:bolder">Height: </span>{{item.height}}</p>
+          <p><span style="color:#ff6;font-weight:bolder">Hair: </span>{{item.hair_color}}</p>
+          <form>
+          <input type="text" id="name" name="name" required minlength="2" [ngModel]="item.name" #productName="ngModel" />
+      
+          <div class="error" *ngIf="productName.dirty && productName.errors?.required">
+                Campo obrigatório
+            </div>
+            <div class="error" *ngIf="productName.dirty && productName.errors?.minlength">
+              Tamanho inválido. Minimo 2 caracteres
+            </div> 
+            <div class="error" *ngIf="productName.valid">
+              foi
+            </div>
+        
+          </form>
+          <button class="dicas" (click)="openWindowCustomClass(content)">Dicas</button>
+          <ng-template #content let-c="close" let-d="dismiss">
+      
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+         
+            <div class="modal-body">
+              <p>Mass:{{item.mass}}</p> 
+              <p>Skin color: {{item.skin_color}}</p>
+              <p>Eyes color: {{item.eye_color}}</p>
+              <p>Birth Year: {{item.birth_year}}</p>
+            </div>
+           
+          </ng-template>
+          
+          
+
+          </div>
+      </div>
+    </div>
+</div>
+
